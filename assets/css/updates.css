@@ -2,7 +2,9 @@
 :root {
     --updates-card-bg: #2a2a2a;
     --updates-border: rgba(255, 255, 255, 0.1);
-    --updates-highlight: #8b4af0;
+    --updates-highlight: rgb(139, 74, 240);
+    --tab-active: #7c3aed;
+    --tab-hover: #6d28d9;
 }
 
 /* Updates specific styles */
@@ -15,103 +17,114 @@
 .updates-header {
     text-align: center;
     margin-bottom: 3rem;
-    padding-top: 10rem;
+    padding-top: 5rem;
 }
 
 .updates-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    background: var(--gradient-1);
+    background: linear-gradient(45deg, #7c3aed, #3b82f6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
 }
 
+/* Tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.tab-button {
+    background: transparent;
+    border: 2px solid var(--updates-border);
+    color: var(--text-primary);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+    border-color: var(--tab-hover);
+    background: rgba(109, 40, 217, 0.1);
+}
+
+.tab-button.active {
+    background: var(--tab-active);
+    border-color: var(--tab-active);
+    color: white;
+}
+
+/* Tab Content */
+.tab-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.tab-content.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Updates Grid */
 .updates-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: list-item;
     gap: 2rem;
+    list-style-type: none;
 }
 
 .update-entry {
     background: var(--updates-card-bg);
-    border-radius: 1rem;
-    padding: 1.5rem;
     border: 1px solid var(--updates-border);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    overflow: hidden;
-}
-
-.update-entry::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(45deg, var(--accent-color), transparent);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 0;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
 }
 
 .update-entry:hover {
-    transform: translateY(-5px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    border-color: var(--accent-color);
-}
-
-.update-entry:hover::before {
-    opacity: 0.05;
-}
-
-.update-entry > * {
-    position: relative;
-    z-index: 1;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 74, 240, 0.3);
+    border-color: var(--updates-highlight);
 }
 
 .update-date {
     color: var(--updates-highlight);
     font-size: 0.9rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .update-title {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
     color: var(--text-primary);
 }
 
 .update-description {
     color: var(--text-secondary);
-    font-size: 0.95rem;
+    line-height: 1.6;
     margin-bottom: 1.5rem;
 }
 
 .version-number {
     display: inline-block;
-    background: rgba(124, 58, 237, 0.25);
-    color: var(--accent-color);
-    padding: 0.25rem 0.75rem;
-    border-radius: 0.5rem;
+    background: rgba(139, 74, 240, 0.1);
+    color: var(--updates-highlight);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
     font-size: 0.9rem;
-    font-weight: 600;
-    border: 1px solid rgba(124, 58, 237, 0.3);
-    text-shadow: 0 0 10px rgba(124, 58, 237, 0.3);
-    transition: all 0.3s ease;
-}
-
-.update-entry:hover .version-number {
-    background: rgba(124, 58, 237, 0.35);
-    box-shadow: 0 0 15px rgba(124, 58, 237, 0.2);
-    transform: scale(1.05);
+    font-weight: 500;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .updates-container {
-        margin-top: 0;
         padding: 0 1rem;
     }
 
@@ -123,7 +136,16 @@
         font-size: 2rem;
     }
 
-    .updates-grid {
-        grid-template-columns: 1fr;
+    .tabs {
+        gap: 0.5rem;
+    }
+
+    .tab-button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .update-entry {
+        padding: 1.5rem;
     }
 }

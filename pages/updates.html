@@ -15,31 +15,84 @@
         <div class="nav-content">
             <a href="../index.html" class="logo">PuzzleWorld</a>
             <div class="nav-links">
-                <a href="../index.html">Home</a>
-                <a href="documentation.html">Documentation</a>
-                <a href="bugreport.html">Bug Report</a>
-                <a href="updates.html" class="active">Updates</a>
+                <a href="../index.html" target="_blank" >Home</a>
+                <li><a href="https://www.roblox.com/games/83516262396677/Puzzle-World" target="_blank" class="play-button">Play Now</a></li>
             </div>
         </div>
     </nav>
-
     <main class="updates-container">
         <div class="updates-header">
-            <h1>Latest Updates</h1>
-            <p>Stay informed about the latest improvements and additions to PuzzleWorld</p>
+            <h1>Updates</h1>
+            <p>Track the latest changes and improvements to PuzzleWorld</p>
         </div>
 
-        <div class="updates-grid">
-            <div class="update-entry">
-                <div class="update-date">February 17, 2025</div>
-                <h2 class="update-title">Pre-Testing Release</h2>
-                <p class="update-description">
-                    Initial release of PuzzleWorld for pre-testing. This version includes the core puzzle mechanics,
-                    basic user interface, and fundamental features. We welcome your feedback to help improve the experience.
-                </p>
-                <div class="version-number">v1.0.0</div>
+        <div class="tabs">
+            <button class="tab-button active" data-tab="pre-testing">Pre-Testing</button>
+            <button class="tab-button" data-tab="alpha">Alpha</button>
+            <button class="tab-button" data-tab="beta">Beta</button>
+            <button class="tab-button" data-tab="release">Full Release</button>
+        </div>
+
+        <div class="tab-content active" id="pre-testing">
+            <div class="updates-grid">
+                <div class="update-entry">
+                    <div class="update-date">February 17, 2025</div>
+                    <h2 class="update-title">Bug Fixes</h2>
+                    <p class="update-description">
+                        Many bug fixes and gameplay enhancements have been implemented, making more polished and engaging gameplay. This has made gameplay smoother and less buggy!
+                    <div class="version-number">v1.1t</div>
+                </div>
+                <div class="update-entry">
+                    <div class="update-date">February 17, 2025</div>
+                    <h2 class="update-title">Pre-Testing Release</h2>
+                    <p class="update-description">
+                        Initial release of PuzzleWorld for pre-testing. This version includes the core puzzle mechanics,
+                        basic user interface, and fundamental features. We welcome your feedback to help improve the experience.
+                    </p>
+                    <div class="version-number">v1.0t</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="alpha">
+            <div class="updates-grid">
+                <div class="update-entry">
+                    <div class="update-date">April, 2025</div>
+                    <h2 class="update-title">Alpha Release</h2>
+                    <p class="update-description">
+                        Coming Soon! The alpha version will include World 2, new features, and many improvements.
+                    </p>
+                    <div class="version-number">v1.0.0a</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="beta">
+            <div class="updates-grid">
+                <div class="update-entry">
+                    <div class="update-date">May, 2025</div>
+                    <h2 class="update-title">Beta Release</h2>
+                    <p class="update-description">
+                        Coming Soon! The beta version will feature enhanced gameplay, bug fixes, and performance improvements.
+                    </p>
+                    <div class="version-number">v1.0.0b</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="release">
+            <div class="updates-grid">
+                <div class="update-entry">
+                    <div class="update-date">June, 2025</div>
+                    <h2 class="update-title">Full Release</h2>
+                    <p class="update-description">
+                        Coming Soon! The full release will include all worlds, complete storyline, and unique features.
+                    </p>
+                    <div class="version-number">v1.0.0</div>
+                </div>
             </div>
         </div>
     </main>
+    <script src="../assets/js/updates.js"></script>
 </body>
 </html>
