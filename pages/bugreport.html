@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PuzzleWorld - Bug Tracker</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">PuzzleWorld</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="devforum.html">DevForum</a></li>
+                <li><a href="pages/documentation.html">Documentation</a></li>
+                <li><a href="https://www.roblox.com/games/83516262396677/Puzzle-World" target="_blank" class="play-button">Play Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="bug-tracker">
+            <div class="section-header">
+                <h1>Bug Tracker</h1>
+                <p class="section-description">Track and monitor the status of reported issues in PuzzleWorld</p>
+            </div>
+            
+            <div class="tracker-filters">
+                <div class="filter-group">
+                    <button class="filter-btn active" data-filter="all">
+                        <span class="filter-icon">🔍</span>
+                        All Bugs
+                    </button>
+                    <button class="filter-btn" data-filter="found">
+                        <span class="filter-icon">⚠️</span>
+                        Found
+                    </button>
+                    <button class="filter-btn" data-filter="fixing">
+                        <span class="filter-icon">🔧</span>
+                        Fixing
+                    </button>
+                    <button class="filter-btn" data-filter="testing">
+                        <span class="filter-icon">🧪</span>
+                        Testing
+                    </button>
+                    <button class="filter-btn" data-filter="fixed">
+                        <span class="filter-icon">✅</span>
+                        Fixed
+                    </button>
+                </div>
+                <div class="search-box">
+                    <span class="search-icon">🔎</span>
+                    <input type="text" placeholder="Search">
+                </div>
+            </div>
+
+            <div class="bugs-list">
+                <div class="bug-card" data-status="found">
+                    <div class="bug-header">
+                        <span class="bug-id">#001</span>
+                        <span class="bug-status fixing">⚠️ Found</span>
+                    </div>
+                    <h3>Inventory Title</h3>
+                    <p class="bug-description">Inventory Text does not update</p>
+                    <div class="bug-meta">
+                        <span class="bug-area">📍 All Areas</span>
+                        <span class="bug-priority low">⚡ Low Priority</span>
+                    </div>
+                    <div class="bug-footer">
+                        <span class="bug-date">Found: Feb 17, 2025</span>
+                        <span class="bug-update">Last Update: 2 hours ago</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/bugTracker.js"></script>
+</body>
+</html>
