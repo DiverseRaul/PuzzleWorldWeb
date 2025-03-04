@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PuzzleWorld - Analytics</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">PuzzleWorld</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Resources</a>
+                    <div class="dropdown-menu">
+                        <a href="index.html#features">Features</a>
+                        <a href="index.html#gallery">Gallery</a>
+                        <a href="devforum.html">DevForum</a>
+                        <a href="analytics.html">Analytics</a>
+                    </div>
+                </li>
+                <li><a href="https://discord.gg/wZwcZdhcFB" target="_blank" class="discord-button">Discord</a></li>
+                <li><a href="https://www.roblox.com/games/83516262396677/Puzzle-World" target="_blank" class="play-button">Play Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="analytics-dashboard">
+            <div class="section-header">
+                <h1>Game Analytics</h1>
+                <p class="section-description">Track the performance and player engagement of PuzzleWorld</p>
+            </div>
+
+            <div class="analytics-overview">
+                <div class="analytics-card gradient-purple">
+                    <div class="analytics-icon">👥</div>
+                    <div class="analytics-data">
+                        <h3>Total Players</h3>
+                        <div class="analytics-number">840</div>
+                        <div class="analytics-trend positive">
+                            <span class="trend-arrow">↑</span> 98% this month
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="analytics-card gradient-blue">
+                    <div class="analytics-icon">🏆</div>
+                    <div class="analytics-data">
+                        <h3>Puzzles Completed</h3>
+                        <div class="analytics-number">1K</div>
+                        <div class="analytics-trend positive">
+                            <span class="trend-arrow">↑</span> 99% this month
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="analytics-card gradient-green">
+                    <div class="analytics-icon">⏱️</div>
+                    <div class="analytics-data">
+                        <h3>Avg. Session Time</h3>
+                        <div class="analytics-number">28.5 min</div>
+                        <div class="analytics-trend positive">
+                            <span class="trend-arrow">↑</span> 92% this month
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="analytics-card gradient-orange">
+                    <div class="analytics-icon">🔄</div>
+                    <div class="analytics-data">
+                        <h3>Retention Rate</h3>
+                        <div class="analytics-number">68.3%</div>
+                        <div class="analytics-trend positive">
+                            <span class="trend-arrow">↑</span> 55% this month
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analytics-charts-container">
+                <div class="analytics-chart-card">
+                    <h3>Player Growth</h3>
+                    <div class="chart-container">
+                        <canvas id="playerGrowthChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="analytics-chart-card">
+                    <h3>Popular Puzzles</h3>
+                    <div class="chart-container">
+                        <canvas id="popularPuzzlesChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="analytics-details">
+                <div class="analytics-detail-card">
+                    <h3>Player Demographics</h3>
+                    <div class="demographics-container">
+                        <div class="demographic-item">
+                            <div class="demographic-label">Age Group</div>
+                            <div class="demographic-bar-container">
+                                <div class="demographic-bar" style="width: 65%; background: #7c3aed;">
+                                    <span>13-18</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demographic-item">
+                            <div class="demographic-label"></div>
+                            <div class="demographic-bar-container">
+                                <div class="demographic-bar" style="width: 20%; background: #4f46e5;">
+                                    <span>19-24</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demographic-item">
+                            <div class="demographic-label"></div>
+                            <div class="demographic-bar-container">
+                                <div class="demographic-bar" style="width: 15%; background: #8b5cf6;">
+                                    <span>25+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="analytics-detail-card">
+                    <h3>Feature Usage</h3>
+                    <div class="feature-usage-container">
+                        <div class="feature-item">
+                            <div class="feature-info">
+                                <span class="feature-name">Egg Hatching</span>
+                                <span class="feature-percentage">20K</span>
+                            </div>
+                            <div class="feature-progress-bg">
+                                <div class="feature-progress" style="width: 92%; background: linear-gradient(90deg, #7c3aed, #4f46e5);"></div>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-info">
+                                <span class="feature-name">UI Interaction</span>
+                                <span class="feature-percentage">9K</span>
+                            </div>
+                            <div class="feature-progress-bg">
+                                <div class="feature-progress" style="width: 78%; background: linear-gradient(90deg, #4f46e5, #3b82f6);"></div>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-info">
+                                <span class="feature-name">Coin Collection</span>
+                                <span class="feature-percentage">8K</span>
+                            </div>
+                            <div class="feature-progress-bg">
+                                <div class="feature-progress" style="width: 45%; background: linear-gradient(90deg, #3b82f6, #0ea5e9);"></div>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-info">
+                                <span class="feature-name">Puzzle Completion</span>
+                                <span class="feature-percentage">1K</span>
+                            </div>
+                            <div class="feature-progress-bg">
+                                <div class="feature-progress" style="width: 63%; background: linear-gradient(90deg, #0ea5e9, #06b6d4);"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 PuzzleWorld. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://discord.gg/puzzleworld" target="_blank" class="social-link">Discord</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Player Growth Chart
+        const playerGrowthCtx = document.getElementById('playerGrowthChart').getContext('2d');
+        const playerGrowthChart = new Chart(playerGrowthCtx, {
+            type: 'line',
+            data: {
+                labels: ['Dec', 'Jan', 'Feb'],
+                datasets: [{
+                    label: 'New Players',
+                    data: [12, 120, 840],
+                    borderColor: '#7c3aed',
+                    backgroundColor: 'rgba(124, 58, 237, 0.1)',
+                    borderWidth: 3,
+                    tension: 0.4,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.05)'
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    }
+                }
+            }
+        });
+
+        // Popular Puzzles Chart
+        const popularPuzzlesCtx = document.getElementById('popularPuzzlesChart').getContext('2d');
+        const popularPuzzlesChart = new Chart(popularPuzzlesCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Basic Obby', 'Rolling Cars', 'Numbers', 'Woodcutting', 'LogObby'],
+                datasets: [{
+                    label: 'Completions',
+                    data: [85, 342, 200, 130, 87],
+                    backgroundColor: [
+                        '#7c3aed',
+                        '#4f46e5',
+                        '#3b82f6',
+                        '#0ea5e9',
+                        '#06b6d4'
+                    ],
+                    borderRadius: 5
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 500,
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.05)'
+                        }
+                    },
+                    x: {
+                        grid: {
+                            display: false
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
